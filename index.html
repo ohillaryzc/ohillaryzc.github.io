@@ -1,30 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello Everyone</title>
+  <title>my resume</title>
   <style>
     *{
       margin: 0;
       padding: 0;
+      color: #606266;
     }
-    .img-box{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    ul{
+      margin-left: 20px;
+    }
+    h2, h3, h4{
+      color: #34495E;
+      margin-bottom: 10px;
+    }
+    .item{
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .item li{
+      line-height: 25px;
+      margin: 12px 0;
+    }
+    .container{
+      /*padding: 0 20px;*/
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="img-box">
-    <span>Hello World</span>
-    <p>!</p>
+  <!-- 联系方式 -->
+  <div class="contact item">
+    <h2>联系方式</h2>
+    <ul>
+      <li>手机：187xxxxxxxx</li>
+      <li>Email：xxxxxx@gmail.com</li>
+      <li>微信号/QQ：187xxxxxx/179xxxxxx</li>
+    </ul>
   </div>
+
+  <!-- 个人信息 -->
+  <div class="info item">
+    <h2>个人信息</h2>
+    <ul>
+      <li>xiegou/男/1998</li>
+      <li>本科/五道口职业技术学院（软件技术）</li>
+      <li>工作年限：1.5年</li>
+      <li>期望职位：Java架构师</li>
+      <li>GitHub：https://github.com/ohillaryzc</li>
+    </ul>
+  </div>
+
+  <!-- 工作经历 -->
+  <div class="work item">
+    <h2>工作经历</h2>
+    <h3>xxx公司[前端开发]（2018.12 - 2020.1）</h3>
+    <h4>项目一</h4>
+
+    <h4>项目二</h4>
+
+    <h4>项目三</h4>
+
+    <h4>项目四</h4>
+
+  </div>
+
+  <!-- 技能清单 -->
+  <div class="skill item">
+    <h2>技能清单</h2>
+    <ul>
+      <li>Web开发：JavaScript/Node</li>
+      <li>Web框架：Vue.js/React</li>
+      <li>UI组件库：Element UI/iView/vant</li>
+      <li>前端工具：webpack</li>
+      <li>版本管理：Git/Svn</li>
+      <li>开放平台：微信开放平台</li>
+    </ul>
+  </div>
+
 </div>
 </body>
 </html>
