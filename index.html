@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,10 @@
       color: #34495E;
       margin-bottom: 10px;
     }
+    .container{
+      max-width: 768px;
+      margin: 0 auto;
+    }
     .item{
       padding: 20px 0;
       border-bottom: 1px solid #eee;
@@ -24,8 +29,22 @@
       line-height: 25px;
       margin: 12px 0;
     }
-    .container{
-      /*padding: 0 20px;*/
+    .item p{
+      line-height: 24px;
+    }
+    .contact ul{
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      padding-left: 20px;
+      box-sizing: border-box;
+      display: flex;
+    }
+    .contact ul li{
+      flex: 1;
+    }
+    .work h4{
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -35,9 +54,9 @@
   <div class="contact item">
     <h2>联系方式</h2>
     <ul>
-      <li>手机：187xxxxxxxx</li>
-      <li>Email：xxxxxx@gmail.com</li>
-      <li>微信号/QQ：187xxxxxx/179xxxxxx</li>
+      <li>手机/微信：18779783731</li>
+      <li>QQ：1796867290</li>
+      <li>Email：ohillaryzc@gmail.com</li>
     </ul>
   </div>
 
@@ -45,10 +64,10 @@
   <div class="info item">
     <h2>个人信息</h2>
     <ul>
-      <li>xiegou/男/1998</li>
-      <li>本科/五道口职业技术学院（软件技术）</li>
+      <li>刘志超/男/1998</li>
+      <li>专科/九江职业技术学院（软件技术）</li>
       <li>工作年限：1.5年</li>
-      <li>期望职位：Java架构师</li>
+      <li>期望职位：Web前端开发</li>
       <li>GitHub：https://github.com/ohillaryzc</li>
     </ul>
   </div>
@@ -56,14 +75,29 @@
   <!-- 工作经历 -->
   <div class="work item">
     <h2>工作经历</h2>
-    <h3>xxx公司[前端开发]（2018.12 - 2020.1）</h3>
-    <h4>项目一</h4>
+    <h3>广州市微尔森信息技术咨询有限责任公司[前端开发]（2018.12 - 2020.1）</h3>
+    <h4>- SAE艺术教育平台微信公众号</h4>
+    <p>负责微信公众号网页开发；基于微信公众号实现学生查课，上课签到，请假，分享课程；教师排课，调课，审批请假，发送通知等功能。</p>
+    <p>项目用Vue + vant完成页面搭建，基于axios二次封装请求模块，vuex保存用户数据状态，vue-router控制页面路由跳转，solarlunar处理日历时间。</p>
+    <p>基于vue-CLI改造项目多入口，实现最大化组件复用，模块清晰。</p>
+    <p>课程表的展示涉及到数据到界面的转换：接口返回数据为一维数组，需要根据上课时间段生成对应课表7 * n表格的二维数组，遍历二维数组即可生成页面结构，遍历时添加对应点击事件，携带对应参数。</p>
+    <p>不同机型（Android，iOS）、Vue项目微信分享：不同机型的微信分享在获取签名传递的url上有所不同，Android页面跳转url会发生变化。iOS页面跳转url不会发生变化，会保持入口的url；iOS页面手动刷新url会变成当前页面的url，可在入口文件判断当前机型，如果是iOS保存当前url，在获取签名时判断是否存在保存的url来获取正确的签名。</p>
+    <p>Vue项目路由hash模式分享跳转传参问题实践：微信分享跳转会在配置好的url上加另外的参数，最终跳转结果可能不是我们想要的页面；配置跳转链接为后台接口，后台接口再重定向到前端页面，就解决了微信跳转增加参数问题。</p>
 
-    <h4>项目二</h4>
+    <h4>- i船代船运后台管理系统</h4>
+    <p>地图显示船舶位置、航向，点击地图船舶图标显示船舶信息；抵港，抛锚，装卸货物，离港，联检等时间记录；分修改，查看权限；港口图片视频上传功能。</p>
+    <p>Vue + Element UI + axios + vue-router搭建项目，地图采用百度地图API，主要负责地图交互、权限控制、动态菜单模块。</p>
+    <p>权限控制运用Vue自定义指令，根据当前登录用户角色控制页面元素显示或隐藏；动态菜单是根据登录用户角色和路由配置文件生成菜单，同时在入口文件注册路由beforeEach，根据用户角色判断跳转。</p>
+    <p>百度地图API：绘制路线有大量坐标转换，百度地图提供的坐标转换有数量限制，涉及到坐标顺序问题，需要顺序批次转换，运用递归转换坐标，判断是否最后一组坐标结束递归，可保证坐标顺序。</p>
 
-    <h4>项目三</h4>
+    <h4>小裙子APP后台管理系统</h4>
+    <p>该项目是一个Lolita服装社区后台管理系统，有发布资讯、话题、帖子，管理用户，评论，处理反馈、举报等功能；</p>
+    <p>Vue + Element UI搭建项目，axios处理网络请求，vue-router页面路由跳转，webpack打包部署；</p>
+    <p>图片处理：新增裙子涉及到图片上传，需要一定的图片编辑功能；vue-copper提供了图片剪切功能，初始化通过FileReader提供的readAsDataURL方法把获取到的File对象转成Base64完成初始化；剪切完成返回Blob对象，用FormData封装，并修改请求头'Content-Type'为'multipart/form-data'，这样控制台看到的请求数据很清晰，便于调试。</p>
+    <p>数据可视化：ECharts提供了多元化，可配置的可视化组件，提供了按需引入的方式，优化项目体积及页面打开速度。</p>
+    <p>检索组件：后台有大量的列表页面，需要复杂的检索功能，自定义了一个检索组件，通过表单项（数组）映射到页面表单结构，传入配置，动态生成表单，同时暴露出数据获取方法；该组件可以很灵活的实现业务需求。</p>
 
-    <h4>项目四</h4>
+    <!--    <h4>项目四</h4>-->
 
   </div>
 
@@ -71,13 +105,19 @@
   <div class="skill item">
     <h2>技能清单</h2>
     <ul>
-      <li>Web开发：JavaScript/Node</li>
-      <li>Web框架：Vue.js/React</li>
+      <li>Web开发：JavaScript/HTML/CSS/Node</li>
+      <li>Web框架：Vue.js/jQuery</li>
       <li>UI组件库：Element UI/iView/vant</li>
       <li>前端工具：webpack</li>
       <li>版本管理：Git/Svn</li>
       <li>开放平台：微信开放平台</li>
     </ul>
+  </div>
+
+  <!-- 我的特点 -->
+  <div class="code item">
+    <h2>自我评价</h2>
+    <p>JavaScript基础扎实（原型、闭包、面向对象）；对JavaScript事件循环(Event-Loop)有一定的理解；熟悉DOM编程（原生、jQuery）；对于JavaScript异步有深入的理解；JavaScript代码无分号拥护者，严格遵循ESLint代码规范（代码洁癖）；</p>
   </div>
 
 </div>
