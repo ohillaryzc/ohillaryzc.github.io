@@ -46,78 +46,147 @@
     .work h4{
       margin-top: 20px;
     }
+    .object-item{
+      margin-bottom: 20px;
+    }
+    .object-item p{
+      padding-left: 20px;
+      line-height: 26px;
+    }
+    .object-item .title{
+      padding: 0;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 <div class="container">
   <!-- 联系方式 -->
   <div class="contact item">
-    <h2>联系方式</h2>
+    <h2>联系方式/个人信息</h2>
     <ul>
       <li>手机/微信：18779783731</li>
       <li>QQ：1796867290</li>
       <li>Email：ohillaryzc@gmail.com</li>
     </ul>
+    <ul>
+      <li>刘志超/男/1998/专科</li>
+      <li>工作年限：1.5年</li>
+      <li>期望职位：Web前端开发</li>
+    </ul>
   </div>
 
   <!-- 个人信息 -->
-  <div class="info item">
+  <!--<div class="info item contact">
     <h2>个人信息</h2>
     <ul>
-      <li>刘志超/男/1998</li>
-      <li>专科/九江职业技术学院（软件技术）</li>
+      <li>刘志超/男/1998/专科</li>
+      &lt;!&ndash;<li>专科/九江职业技术学院（软件技术）</li>&ndash;&gt;
+      &lt;!&ndash;<li>GitHub：https://github.com/ohillaryzc</li>&ndash;&gt;
       <li>工作年限：1.5年</li>
       <li>期望职位：Web前端开发</li>
-      <!--<li>GitHub：https://github.com/ohillaryzc</li>-->
+    </ul>
+  </div>-->
+
+  <!-- 技能清单 -->
+  <div class="skill item">
+    <h2>专业技能</h2>
+    <ul style="list-style: none;margin-left: 0;">
+      <li>1、熟练HTML、DIV+CSS的页面布局，能根据设计图完成页面制作；</li>
+      <li>2、熟练使用原生JavaScript以及常用JavaScript库，如jQuery；</li>
+      <li>3、能运用模块化、面向对象的方式编程；</li>
+      <li>4、熟悉http协议，能够根据http请求报文、响应报文和状态码排查问题；</li>
+      <li>5、熟练运用ajax实现异步数据传递，熟悉JSON等数据交换格式；了解Java和数据库；</li>
+      <li>6、了解如何使用node.js搭建本地server模拟接口返回数据测试ajax接口；</li>
+      <li>7、能使用Element UI、iView、vant、Bootstrap等前端样式库和框架进行开发；</li>
+      <li>8、有Vue等(MVVM)框架开发经验，了解双向数据绑定原理，熟练编写控制器、组件、过滤器等</li>
+      <li>9、了解webpack打包工具；</li>
+      <li>10、熟悉使用Git和SVN进行代码管理和版本控制；</li>
+      <!--<li>Web开发：JavaScript/HTML/CSS/Node</li>-->
+      <!--<li>Web框架：Vue.js/jQuery</li>-->
+      <!--<li>UI组件库：Element UI/iView/vant</li>-->
+      <!--<li>前端工具：webpack</li>-->
+      <!--<li>版本管理：Git/Svn</li>-->
+      <!--<li>开放平台：微信开放平台</li>-->
     </ul>
   </div>
 
   <!-- 工作经历 -->
   <div class="work item">
     <h2>工作经历</h2>
-    <h3>广州市微尔森信息技术咨询有限责任公司[前端开发]（2018.12 - 2020.1）</h3>
-    <h4>- SAE艺术教育平台微信公众号</h4>
-    <ul>
-      <li>负责微信公众号网页开发；基于微信公众号实现学生查课，上课签到，请假，分享课程；教师排课，调课，审批请假，发送通知等功能。</li>
-      <li>项目用Vue + vant完成页面搭建，基于axios二次封装请求模块，vuex保存用户数据状态，vue-router控制页面路由跳转，solarlunar处理日历时间。</li>
-      <li>基于vue-CLI改造项目多入口，实现最大化组件复用，模块清晰。</li>
+    <h3>广州市微尔森信息技术咨询有限责任公司（2018.12 - 2020.1）研发部-前端开发</h3>
+    <p>负责用户界面制作、数据交互；以及项目公共组件编写、工具类编写等。</p>
+  </div>
+
+  <div class="work item">
+    <h2>项目经验</h2>
+    <h3>- SAE艺术教育平台微信公众号</h3>
+    <div class="object-item">
+      <p class="title">项目描述：</p>
+      <p>该项目是基于微信公众号实现学生查课，上课签到，请假，分享课程；教师排课，调课，审批请假，发送通知等功能。</p>
+
+      <p class="title">负责模块：</p>
+      <p>1、项目前端架构搭建；</p>
+      <p>2、公共组件编写，工具类编写，封装请求模块；</p>
+
+      <p class="title">技术要点：</p>
+      <p>1、Vue + vant完成页面搭建，基于axios二次封装请求模块，vuex保存用户数据状态，vue-router控制页面路由跳转，solarlunar处理日历时间。</p>
+      <p>2、基于vue-CLI改造项目多入口，实现最大化组件复用；</p>
+      <p>3、课表组件是把数据映射到结构上，通过分析后台返回的数据生成特定的数据结构映射到结构上；</p>
+      <p>4、微信分享受不同机型限制，签名用到的URL要根据不同情况来获取；</p>
+    </div>
+    <!--<ul>
+      <li>该项目是基于微信公众号实现学生查课，上课签到，请假，分享课程；教师排课，调课，审批请假，发送通知等功能。</li>
+      <li>基本架构：项目用Vue + vant完成页面搭建，基于axios二次封装请求模块，vuex保存用户数据状态，vue-router控制页面路由跳转，solarlunar处理日历时间。</li>
+      <li>优化提升：基于vue-CLI改造项目多入口，实现最大化组件复用，模块清晰。</li>
       <li>课程表的展示涉及到数据到界面的转换：接口返回数据为一维数组，需要根据上课时间段生成对应课表7 * n表格的二维数组，遍历二维数组即可生成页面结构，遍历时添加对应点击事件，携带对应参数。</li>
       <li>不同机型（Android，iOS）、Vue项目微信分享：不同机型的微信分享在获取签名传递的url上有所不同，Android页面跳转url会发生变化。iOS页面跳转url不会发生变化，会保持入口的url；iOS页面手动刷新url会变成当前页面的url，可在入口文件判断当前机型，如果是iOS保存当前url，在获取签名时判断是否存在保存的url来获取正确的签名。</li>
       <li>Vue项目路由hash模式分享跳转传参问题实践：微信分享跳转会在配置好的url上加另外的参数，最终跳转结果可能不是我们想要的页面；配置跳转链接为后台接口，后台接口再重定向到前端页面，就解决了微信跳转增加参数问题。</li>
-    </ul>
+    </ul>-->
 
-    <h4>- i船代船运后台管理系统</h4>
-    <ul>
+    <h3>- i船代船运后台管理系统</h3>
+    <div class="object-item">
+      <p class="title">项目描述：</p>
+      <p>记录船舶基本信息以及航行期间的状态，包括抵港，抛锚，装卸货物，离港，联检等；不同工作人员登录后台进行不同的操作，比如派单员可委派任务到具体的工作人员等；系统内部能即时通讯，同一个航次的相关人员能及时沟通。</p>
+
+      <p class="title">负责模块：</p>
+      <p>地图模块、动态菜单、聊天室</p>
+
+      <p class="title">技术要点：</p>
+      <p>1、Vue + Element UI + axios + vue-router搭建项目，地图采用百度地图API；</p>
+      <p>2、根据路由配置文件生成动态菜单，同时用路由beforeEach过滤用户跳转，自定义指令控制页面具体元素根据用户角色显示隐藏；</p>
+      <p>3、封装百度地图组件，运用递归解决百度地图异步转换坐标数量限制带来的坐标顺序问题；</p>
+      <p>4、聊天室用到websocket长链接；实现用户即时通讯；</p>
+    </div>
+    <!--<ul>
       <li>地图显示船舶位置、航向，点击地图船舶图标显示船舶信息；抵港，抛锚，装卸货物，离港，联检等时间记录；分修改，查看权限；港口图片视频上传功能。</li>
       <li>Vue + Element UI + axios + vue-router搭建项目，地图采用百度地图API，主要负责地图交互、权限控制、动态菜单模块。</li>
       <li>权限控制运用Vue自定义指令，根据当前登录用户角色控制页面元素显示或隐藏；动态菜单是根据登录用户角色和路由配置文件生成菜单，同时在入口文件注册路由beforeEach，根据用户角色判断跳转。</li>
       <li>百度地图API：绘制路线有大量坐标转换，百度地图提供的坐标转换有数量限制，涉及到坐标顺序问题，需要顺序批次转换，运用递归转换坐标，判断是否最后一组坐标结束递归，可保证坐标顺序。</li>
-    </ul>
+    </ul>-->
 
     <h4>- 小裙子APP后台管理系统</h4>
-    <ul>
+    <div class="object-item">
+      <p class="title">项目描述：</p>
+      <p>该项目是一个Lolita服装社区后台管理系统，有发布资讯、话题、帖子，管理用户，评论，处理反馈、举报等功能；管理员添加商家，商家针对某一款服装发布资讯。</p>
+
+      <p class="title">负责模块：</p>
+      <p>权限控制、商家管理、发布资讯、上传商品，商家数据可视化</p>
+
+      <p class="title">技术要点：</p>
+      <p>1、Vue + Element UI搭建项目，axios处理网络请求，vue-router页面路由跳转，webpack打包部署；</p>
+      <p>2、图片剪切用到vue-copper组件，通过FileReader提供的readAsDataURL方法把获取到的File对象转成Base64完成初始化，剪切完毕返回Blob对象；</p>
+      <p>3、用FormData包装图片Blob对象，并且设置请求头'Content-Type'为'multipart/form-data'是图片上传较好的实践；</p>
+      <p>4、数据可视化：ECharts提供了多元化，可配置的可视化组件，提供了按需引入的方式，优化项目体积及页面打开速度；</p>
+      <p>5、检索表单组件：根据配置生成动态表单，同时提供获取表单数据的方法；</p>
+    </div>
+    <!--<ul>
       <li>该项目是一个Lolita服装社区后台管理系统，有发布资讯、话题、帖子，管理用户，评论，处理反馈、举报等功能；</li>
       <li>Vue + Element UI搭建项目，axios处理网络请求，vue-router页面路由跳转，webpack打包部署；</li>
       <li>图片处理：新增裙子涉及到图片上传，需要一定的图片编辑功能；vue-copper提供了图片剪切功能，初始化通过FileReader提供的readAsDataURL方法把获取到的File对象转成Base64完成初始化；剪切完成返回Blob对象，用FormData封装，并修改请求头'Content-Type'为'multipart/form-data'，这样控制台看到的请求数据很清晰，便于调试。</li>
       <li>数据可视化：ECharts提供了多元化，可配置的可视化组件，提供了按需引入的方式，优化项目体积及页面打开速度。</li>
       <li>检索组件：后台有大量的列表页面，需要复杂的检索功能，自定义了一个检索组件，通过表单项（数组）映射到页面表单结构，传入配置，动态生成表单，同时暴露出数据获取方法；该组件可以很灵活的实现业务需求。</li>
-    </ul>
-
-    <!--    <h4>项目四</h4>-->
-
-  </div>
-
-  <!-- 技能清单 -->
-  <div class="skill item">
-    <h2>技能清单</h2>
-    <ul>
-      <li>Web开发：JavaScript/HTML/CSS/Node</li>
-      <li>Web框架：Vue.js/jQuery</li>
-      <li>UI组件库：Element UI/iView/vant</li>
-      <li>前端工具：webpack</li>
-      <li>版本管理：Git/Svn</li>
-      <li>开放平台：微信开放平台</li>
-    </ul>
+    </ul>-->
   </div>
 
   <!-- 我的特点 -->
